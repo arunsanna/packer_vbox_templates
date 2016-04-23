@@ -1,7 +1,5 @@
-#!bin/bash
-date > /etc/vagrant_box_build_time
-
-mkdir -pm 700 /home/vagrant/.ssh
-curl -L https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub -o /home/vagrant/.ssh/authorized_keys
-chmod 0600 /home/vagrant/.ssh/authorized_keys
-chown -R vagrant:vagrant /home/vagrant/.ssh
+#!/usr/bin/env bash
+yum -y erase gtk2 libX11 hicolor-icon-theme avahi freetype bitstream-vera-fonts
+yum -y clean all
+rm -rf VBoxGuestAdditions_*.iso
+rm -rf /tmp/rubygems-*
