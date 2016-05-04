@@ -20,7 +20,7 @@
       "type": "vagrant",
       "override": {
         "virtualbox": {
-          "output": "centos-6-5-x64-virtualbox.box"
+          "output": "centos-6-6-x64-virtualbox.box"
         }
       }
     }
